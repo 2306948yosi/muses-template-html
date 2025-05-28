@@ -118,3 +118,7 @@ main#info {
   color: #33485e;
   margin-left: 0.5rem;
 }
+
+#border {
+    border: 2px solid #000;
+}
