@@ -126,7 +126,7 @@ main#info {
 
 #border {
     border: 2px solid #000;
-
+    margin-bottom: 0.3rem;
 }
 
 a{
@@ -142,16 +142,3 @@ ul {
   color: blue;
 }
 
-#link div {
-  width: fit-content;
-  color: white;
-  background-color: var(--bg-color);
-  padding: 0.5rem 2rem;
-  margin-left: 0.5rem;
-}
-
-#link div a {
-  color: white;
-  text-decoration: none;
-  display: block;
-}
