@@ -127,7 +127,7 @@ a {
   text-decoration: none;
 }
 
-/*プルダウンメニュー*/
+/*エリア*/
 
 select {
   margin: 20px;
@@ -148,4 +148,16 @@ h2 {
 
 html {
   scroll-behavior: smooth; /* スクロールのスムーズな動作 */
+}
+
+
+/*ページスクロールジャンプ*/
+form {
+  margin-bottom: 50px;
+}
+form .link_menu {
+  width: 100%;
+  padding: 20px;
+  font-size: 16px;
+  cursor: pointer;
 }
