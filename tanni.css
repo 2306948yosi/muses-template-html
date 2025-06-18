@@ -149,3 +149,23 @@ h2 {
 html {
   scroll-behavior: smooth; /* スクロールのスムーズな動作 */
 }
+
+/*表*/
+   th {
+      background-color: #006400; /* 濃い緑（DarkGreen） */
+      color: white;              
+      padding: 8px;
+    }
+
+    td {
+      background-color: #98FB98; /* 薄い緑*/
+      padding: 8px;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+    }
