@@ -325,5 +325,7 @@ a {
   text-decoration: none;
 }
 
-
+.info_btn:any-link{
+  color: black;
+}
 
