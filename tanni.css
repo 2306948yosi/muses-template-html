@@ -126,3 +126,26 @@ main#info {
 a {
   text-decoration: none;
 }
+
+/*プルダウンメニュー*/
+
+select {
+  margin: 20px;
+  padding: 10px;
+}
+
+.section {
+  padding: 50px;
+  margin: 20px 0;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  height: 400px; /* セクションの高さ */
+}
+
+h2 {
+  margin-top: 0;
+}
+
+html {
+  scroll-behavior: smooth; /* スクロールのスムーズな動作 */
+}
