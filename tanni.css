@@ -151,14 +151,20 @@ html {
 }
 
 /*表*/
-   th {
-      background-color: #006400; /* 濃い緑（DarkGreen） */
+   tr:first-child th {
+      background-color: #006400;
       color: white;              
       padding: 8px;
     }
 
     td {
-      background-color: #98FB98; /* 薄い緑*/
+      background-color: #edf3ed;
+      padding: 8px;
+    }
+
+    th{
+      background-color: #539253; 
+      color: white;              
       padding: 8px;
     }
 
@@ -167,5 +173,5 @@ html {
     }
 
     th, td {
-      border: 1px solid #ccc;
+      border: 1px solid #000000;
     }
