@@ -112,6 +112,10 @@ main#info {
   padding: 0.5rem;
 }
 
+.info_btn:hover{
+  background-color: #5a9674;
+}
+
 #info_footer span {
   background-color: white;
   border-radius: 50%;
