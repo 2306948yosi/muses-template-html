@@ -44,60 +44,85 @@
       <div id="info_header"><img src="img/loupe.gif" />単位取得状況</div>
       <div id="info_link">
       </div>
-      <div id="control">
-        <div class="info_btn"><a href="risyuu.html">戻る</a></div>
-          <select id="selectmenu">
-            <option value="">絞り込み</option>
-                  <option value="#select_A">共通教育科目</option>
-                  <option value="#select_B">基礎教育科目</option>
-                  <option value="#select_C">専門科目</option>
-          </select>
-        
-      </div>
+ 
     
-    <div id="section1" class="section">
-     <h3 id="select_A" class="oneArea">共通教育科目</h3>
-      <table border="1">
-        <tr >
-          <th>共通教育科目</th>
+    <label for="filter">科目の種類を選んでください：</label>
+      <select id="filter" onchange="filterTable()">
+        <option value="all">すべて表示</option>
+        <option value="1">共通教育科目</option>
+        <option value="2">基礎教育科目</option>
+        <option value="3">専門科目</option>
+      </select>           
+
+      <table border="1" id="subjectTable">
+        <tr class="1">
+          <th class="main">共通教育科目</th>
           <td>ｘ/16</td>
-        </tr> 
-        <tr>
+       </tr>
+       <tr class="1">
           <th>人文科学科目、<br>
             社会化学科目、<br>
             ジェンダー科目
           </th>
           <td>ｘ/4</td>
         </tr>
-        <tr>
+        <tr class="1">
           <th>国際理解科目、<br>
             現代トピック科目、<br>
             キャリアデザイン科目、<br>
             学び発見ゼミ</th>
              <td>ｘ/2</td>
         </tr>
-       
-        <tr>
+        <tr class="1">
           <th>
-            データリテラシー・
+            ◎データリテラシー・
             AIの基礎
           </th>
           <td>ｘ/2</td>
+        <tr class="2">
+          <th class="main">基礎教育科目</th>
+          <td>ｘ/4</td>
         </tr>
-      </table>
-      
-  </div>
-  <div id="section2" class="section">
-    <h3 id="select_B" class="oneArea">BBB</h3>
-    <p>セクション2仮</p>
-  </div>
-<div id="section2" class="section">
-    <h3 id="select_C" class="oneArea">CCC</h3>
-    <p>セクション3仮</p>
-  </div>
+        <tr class="2">
+          <th>◎初期演習Ⅰ</th>
+          <td>ｘ/1</td>
+        </tr>
+        <tr class="2">
+          <th>◎初期演習Ⅱ</th>
+          <td>ｘ/1</td>
+        </tr>
+        <tr class="2">
+          <th>◎データ・情報リテラシー</th>
+          <td>ｘ/2</td>
+        </tr>
+        <tr class="2">
+          <th>Oral CommunicationⅠ</th>
+          <td>ｘ/1</td>
+        </tr>
+        <tr class="2">
+          <th>Oral CommunicationⅡ</th>
+          <td>ｘ/1</td>
+        <tr class="3">
+          <th class="main">専門科目</th>
+          <td>ｘ/80</td>
+           <tr class="3">
+          <th>◎情報科学入門</th>
+          <td>ｘ/2</td>
+           <tr class="3">
+          <th>◎統計学Ⅰ</th>
+          <td>ｘ/2</td>
+           <tr class="3">
+          <th>◎ICT社会のビジネス</th>
+          <td>ｘ/2</td>
+           <tr class="3">
+          <th>◎社会情報学概論</th>
+          <td>ｘ/2</td>
+        </tr>
+      </table>   
 
+    
 
-  <div class="info_btn"><a href="risyuu.html">戻る</a></div>
+  <div class="info_btn"><a href="risyuu.html">履修</a></div>
       <div id="info_footer"><img src="img/loupe.gif" />単位取得状況</div>
     </main>
 
@@ -114,16 +139,20 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>	
     
   <script>
-      $(function () {
-    $('select').change(function () {
-      var speed = 400;
-      var href = $(this).val();
-      var target = $(href == "#" || href == "" ? 'html' : href);
-      var position = target.offset().top;
-      $('body,html').animate({scrollTop:position}, speed, 'swing');
-      return false;
-    });
-    });
+function filterTable() {
+  const value = document.getElementById("filter").value;
+  const rows = document.querySelectorAll("#subjectTable tr");
+
+  rows.forEach(row => {
+    if (value === "all") {
+      row.style.display = "";
+    } else {
+      row.style.display = row.classList.contains(value) ? "" : "none";
+    }
+  });
+}
+</script>
+
   </script>
   </body>
 </html>
